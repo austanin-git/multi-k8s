@@ -10,8 +10,8 @@ docker push austanin/multi-server:$SHA
 docker push austanin/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=austanin/multi-server:$SHA
-kubectl set image deployments/client-deployment client=austanin/multi-client:$SHA
-kubectl set image deployments/worker-deployment worker=austanin/multi-worker:$SHA
+kubectl set image deployments/server-deployment multi-server=austanin/multi-server:$SHA
+kubectl set image deployments/client-deployment multi-client=austanin/multi-client:$SHA
+kubectl set image deployments/worker-deployment multi-worker=austanin/multi-worker:$SHA
 
 ###
